@@ -3,8 +3,7 @@ pipeline {
    stages {
        stage('Build') {
            steps {
-               echo 'Building..'
-               sh 'nix build s#lilex'
+               sh 'ls'
                archiveArtifacts artifacts: 'result/*'
            }
        }
