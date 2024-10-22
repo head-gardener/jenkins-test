@@ -3,9 +3,9 @@ pipeline {
    stages {
        stage('Build') {
            steps {
+               echo 'PATH=' + env.PATH
                sh "echo 'Starting long-running command'"
                sh 'ls'
-               archiveArtifacts artifacts: 'result/*'
            }
        }
    }
